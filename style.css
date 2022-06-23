@@ -1,4 +1,22 @@
-h1 {
+h1, p {
     color: black; font-size: xx-large;
     text-align: center;
+}
+
+h1 {
+    font-style: bold;
+}
+
+.button-move {
+    text-align: center;
+}
+
+#countdown {
+    position:absolute;
+    top: 0;
+    right: 0;
+    font-size: x-large;
+    height: 70px;
+    width: 200px;
+   
 }
