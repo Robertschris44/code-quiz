@@ -1,50 +1,32 @@
 (function() {
-    function buildQuiz() {
-
-        
-        const startingMinutes =1;
-        let time = startingMinutes * 60;
-
-       const countdownEl = document.getElementById('countdown');
-
-       setInterval(updateCountdown, 1000);
-
-       function updateCountdown(){
-        const minutes =Math.floor(time/60);
-        let seconds = time % 60;
-
-        countdownEl.innerHTML = '${mintes}: ${seconds}';
-        time--;
-       }
-
-        
-      
-      document.getElementById("startQuiz").style.visibility = "hidden"
-      const output = [];
+  function buildQuiz() {
     
-      myQuestions.forEach((currentQuestion, questionNumber) => {
-        const answers = [];
-    
-        for (letter in currentQuestion.answers) {
-          answers.push(
-            `<label>
-            <input type="radio" name="question${questionNumber}" value="${letter}">
-            ${letter} :
-            ${currentQuestion.answers[letter]}
-          </label>`
-          );
-        }
-    
-        output.push(
-          `<div class="question"> ${currentQuestion.question} </div>
-        <div class="answers"> ${answers.join("")} </div>`
+    document.getElementById("startQuiz").style.visibility = "hidden"
+    const output = [];
+  
+    myQuestions.forEach((currentQuestion, questionNumber) => {
+      const answers = [];
+  
+      for (letter in currentQuestion.answers) {
+        answers.push(
+          `<label>
+          <input type="radio" name="question${questionNumber}" value="${letter}">
+          ${letter} :
+          ${currentQuestion.answers[letter]}
+        </label>`
         );
-      });
+      }
+  
+      output.push(
+        `<div class="question"> ${currentQuestion.question} </div>
+      <div class="answers"> ${answers.join("")} </div>`
+      );
+    });
+  
+    quizContainer.innerHTML = output.join("");
+  }
     
-      quizContainer.innerHTML = output.join("");
-    }
-    
-    
+    //this belongs here
     var quizContainer = document.getElementById("quiz");
     var myQuestions = [{
         question: "What is 1 +1?",
@@ -66,5 +48,6 @@
       }
     ];
       document.getElementById('startQuiz').addEventListener('click',buildQuiz);
-    }());
+  }());
+    
     

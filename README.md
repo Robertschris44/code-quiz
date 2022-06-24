@@ -11,6 +11,7 @@ Moved button to the center
 
 # Timer
 Added timer to html and placed it in the top right with css
+Created different js file for timer and linked it to html page
 
 
 # Variables
