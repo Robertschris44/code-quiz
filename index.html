@@ -12,22 +12,28 @@
     <h1 class="title-page">Coding Quiz Challenge</h1>
     <p>Try to answer the following questions below:</p>
 
-    <section class="button-move">
-    <button id="startQuiz" onclick="start()">Start Quiz</button>
-    <div id="quiz"></div>
-    </section>
+     <div class="container">
+        <div id="question-container" class="hide">Question</div>
+        <button class="btn">Answer 1</button>
+        <button class="btn">Answer 2</button>
+        <button class="btn">Answer 3</button>
+        <button class="btn">Answer 4</button>
+     </div>
+
     
-    <section>
-    <span id="timer">1:00</span>
+    
+    <div class="controls">
+    <button id="start-btn" class="start-btn btn" onclick="start()">Start Quiz</button>
+    <button id="next-btn" class="next-btn btn hide">Next</button>
+    <div id="quiz"></div>
+    </div>
+    
+    
+    <span id="timer">Time will start</span>
     <br>
     
     
     
-    
-
-
-
-
 
 
 

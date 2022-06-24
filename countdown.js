@@ -14,7 +14,7 @@ function startTimer(){
   }
   function start()
   {
-      document.getElementById("timer").style="color:green;";
+      document.getElementById("timer").style="color:black;";
       startTimer();
   };
 

@@ -1,3 +1,32 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+:root {
+    --hue-neutral:200;
+    --hue-wrong: 0;
+    --hue-correct: 145;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    --hue: var(--hue-neutral);
+    background-color: hsl(var(--hue), 100%, 20%);
+}
+
+
+.container {
+    text-align: center;
+}
+
+.controls {
+    text-align: center;
+    position: relative; top: 20px;
+}
+
+
 h1, p {
     color: black; font-size: xx-large;
     text-align: center;
@@ -7,7 +36,7 @@ h1 {
     font-style: bold;
 }
 
-.button-move {
+#start-Quiz {
     text-align: center;
 }
 
