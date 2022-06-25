@@ -7,34 +7,32 @@
     <title>Coding Quiz</title>
 </head>
 <link rel="stylesheet" href="./style.css" />
+<a href="http://localhost:52330/highscore.html">View HighScores</a>
 <script defer src="script.js"></script>
 <script defer src="countdown.js"></script>
 
 <body>
-    <h1 class="title-page">Coding Quiz Challenge</h1>
-    <p>Try to answer the following questions</p>
-     <div class="container">
-        <div id="question-container" class="hide"></div>
-        <div id="question">Question</div>
-        <div id="answer-buttons" class="btn-grid">
-        <button class="btn">Answer 1</button>
-        <button class="btn">Answer 2</button>
-        <button class="btn">Answer 3</button>
-        <button class="btn">Answer 4</button>
-        </div>
-     </div>
-    <div class="controls">
-    <button id="start-btn" class="start-btn btn">Start Quiz</button>
-    <button id="next-btn" class="next-btn btn hide">Next</button>
-    </div>
-    
-    
+    <section id="highscoresList">
     <span id="timer">Time will start</span>
-    <br>
-    
-    
-    
+    <h1 class="title-page">Coding Quiz Challenge</h1>
+    <p>Try to answer the following questions below:</p>
 
-    
+
+    <div class="container">
+        <div id="question-container" class="hide">
+            <div id="question">Quesition</div>
+            <div id="answer-buttons" class="btn-grid">
+                <button class="btn">Answer 1</button>
+                <button class="btn">Answer 2</button>
+                <button class="btn">Answer 3</button>
+                <button class="btn">Answer 4</button>
+            </div>
+        </div>
+        <div class="contols">
+            <button id="start-btn" class="start-btn btn" onclick="start()">Start</button>
+            <button id="next-btn" class="next-btn btn">Next</button>
+        </div>
+    </div>
+    </section>
 </body>
 </html>

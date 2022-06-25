@@ -1,7 +1,6 @@
 const startButton = document.getElementById('start-btn')
-const nextButton = document.getElementById('next-btn')
-
 const questionContainerElement = document.getElementById('question-container')
+const nextButton = document.getElementById('next-btn')
 
 const questionElement = document.getElementById('question')
 const answerButtonsElement = document.getElementById('answer-buttons')
@@ -15,10 +14,7 @@ currentQuestionsIndex++
 setNextQuestions()
 })
 
-
-
 function startGame() {
-console.log('Started')
 startButton.classList.add('hide')
 shuffledQuestions = questions.sort(() =>Math.random()- .5)
 currentQuestionsIndex = 0
@@ -87,24 +83,31 @@ function clearStatusClass(element) {
 
 const questions = [
   {
-    questions: 'What is 2 + 2',
+    question: 'What is 2 + 2',
     answers: [
-      {text: '4', correct: true},
-      {text: '45', correct: false}
+      { text: '4', correct: true},
+      { text: '45', correct: false}
     ]
   },
   {
-    questions: 'What is 5 + 5',
+    question: 'What is 5 + 5',
     answers: [
       {text: '10', correct: true},
       {text: '5', correct: false}
     ]
   },
   {
-    questions: 'What is 8 + 8',
+    question: 'What is 8 + 8',
     answers: [
       {text: '16', correct: true},
       {text: '0', correct: false}
+    ]
+  },
+  {
+    question: 'What is 7 * 7',
+    answers: [
+      {text: '49', correct: true},
+      {text: '14', correct: false}
     ]
   }
 ]
