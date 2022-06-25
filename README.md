@@ -26,5 +26,7 @@ added current questions index to js to start with 0
 # Function
 Linked Js at the bottom of html
 Creating function at the top of js "buildQuiz"
-creating co
+
+## Highscore page
+created new html to be albe to go to another page for highscores
 

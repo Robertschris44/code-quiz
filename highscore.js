@@ -1,3 +1,4 @@
+//dont forget to connect to html
 const highscoreList = document.getElementById('highscoresList');
 const highScores = JSON.parse(localStorage.getItem('highscores')) || [];
 
