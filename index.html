@@ -8,8 +8,6 @@
 </head>
 <link rel="stylesheet" href="./style.css" />
 <a href="http://localhost:52330/highscore.html">View HighScores</a>
-<script defer src="script.js"></script>
-<script defer src="countdown.js"></script>
 
 <body>
     <section id="highscoresList">
@@ -20,19 +18,25 @@
 
     <div class="container">
         <div id="question-container" class="hide">
-            <div id="question">Quesition</div>
+            <div id="question"></div>
             <div id="answer-buttons" class="btn-grid">
-                <button class="btn">Answer 1</button>
-                <button class="btn">Answer 2</button>
-                <button class="btn">Answer 3</button>
-                <button class="btn">Answer 4</button>
+                <button type="click" class="btnA">Answer 1</button>
+                <button type="click" class="btnB">Answer 2</button>
+                <button type="click" class="btnC">Answer 3</button>
+                <button type="click" class="btnD">Answer 4</button>
             </div>
         </div>
         <div class="contols">
             <button id="start-btn" class="start-btn btn" onclick="start()">Start</button>
             <button id="next-btn" class="next-btn btn">Next</button>
         </div>
+        <div id="final-screen" class="hide">
+            <input type="text" id="initial-input"/>
+            <button id="init-btn">Save Score</button>
+        </div>
     </div>
     </section>
+    <script src="script.js"></script>
+    <script src="countdown.js"></script>
 </body>
 </html>
