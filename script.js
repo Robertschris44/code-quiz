@@ -100,6 +100,7 @@ document.getElementById("start-btn").addEventListener("click", function(){
 });
 
 
+
 var questions = [
   {
     question: 'What is 2 + 2',
