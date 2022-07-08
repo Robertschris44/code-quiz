@@ -95,6 +95,10 @@ var score = time;
 var initialInput = document.getElementById("initial-input");
 var initialButton = document.getElementById("init-btn");
 
+var startScreen = document.getElementById("start-screen");
+var questionsDiv = document.getElementById("question-container");
+var finalScreen = document.getElementById("final-screen");
+
 document.getElementById("start-btn").addEventListener("click", function(){
   startQuiz();
 });
@@ -128,6 +132,8 @@ var currentQuestionsIndex = 0;
 
 function startQuiz(){
   timerID =setInterval(startTime, 1000);
+  startScreen.classList.add("hide");
+  questionsDiv.classList.remove("hide");
   setQuestions();
 };
 
@@ -161,6 +167,8 @@ function answerCheck(selectedAnswer){
 
 function endQuiz(){
   clearInterval(time);
+  finalScreen.classList.remove("hide");
+  questionsDiv.classList.add("hide");
 };
 
 
@@ -170,7 +178,7 @@ var startTime = function(){
     document.getElementById("timer").innerHTML = time;
   }else {
     clearInterval(timerID);
-    alert("time is us");
+    endQuiz();
   }
 }
 
@@ -195,3 +203,5 @@ function saveScore(){
   localStorage.setItem(score, initials);
   startQuiz();
 }
+
+initialButton.addEventListener("click", saveScore);
